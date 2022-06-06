@@ -1,0 +1,53 @@
+.list-item-content {
+  background-color: #fff;
+  border: 1px solid #97dbae;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.list-item-content > img {
+  width: 140px;
+}
+
+.list-item-content > p {
+  font-size: 36px;
+  font-weight: bold;
+  color: #97dbae;
+}
+
+.list-item-content > div > p {
+  font-size: 16px;
+}
+
+.list-item-content > p > span {
+  font-size: 64px;
+}
+
+.list-item-price {
+  font-weight: bold;
+}
+
+.list-item-button {
+  border: 1px solid #97dbae;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 25px 2px 20px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  color: #fff;
+  background-color: #97dbae;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.list-item-button:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}

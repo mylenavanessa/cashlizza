@@ -1,0 +1,29 @@
+.categories-container {
+  width: 70%;
+  background: #fff;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-container:hover {
+  border-bottom: 2px solid #97dbae;
+  cursor: pointer;
+}
+
+.category_img {
+  background: #f2f2f2;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.category_img > img {
+  padding: 5px;
+}
