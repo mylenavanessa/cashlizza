@@ -9,10 +9,12 @@ import { Contact } from './pages/Contact';
 import { About } from './pages/About';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { CategoriesProvider } from './store/categories';
 
 
 function App() {
   return (
+    <CategoriesProvider>
     <Router>
       <Navbar />
       <Switch>
@@ -39,6 +41,7 @@ function App() {
       </Switch>
       <Footer />
     </ Router>
+    </CategoriesProvider>
     );
 }
 

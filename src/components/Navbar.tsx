@@ -20,17 +20,17 @@ export function Navbar() {
         <ul>
           <li>
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-              <img src={logoFacebook} alt="twitter"/>
+              <img src={logoFacebook} alt="logo facebook"/>
             </a>
           </li>
           <li>
             <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
-              <img src={logoInstagram} alt="twitter"/>
+              <img src={logoInstagram} alt="logo instagram"/>
             </a>
           </li>
           <li>
             <a href='https://twitter.com/' target="_blank" rel="noreferrer">
-              <img src={logoTwitter} alt="twitter"/>
+              <img src={logoTwitter} alt="logo twitter"/>
             </a>
           </li>
         </ul>
