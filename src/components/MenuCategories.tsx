@@ -9,6 +9,7 @@ import iconPlaca from '../assets/icon-placa.svg'
 import '../styles/menuCategories.css'
 import { useContext } from 'react'
 import { CategoriesContext } from '../store/categories'
+import { GeneralContext } from '../store/general'
 
 
 const CATEGORIES = [
@@ -24,6 +25,7 @@ const CATEGORIES = [
 
 export function MenuCategories() {
   const { category, selectCategory } = useContext(CategoriesContext);
+  const { selectKey, fetchStores} = useContext(GeneralContext);
 
   return (
     <div className="categories-container">
@@ -31,9 +33,9 @@ export function MenuCategories() {
         <div 
           key={item.name} 
           className='category-container'  
-          onClick={() => selectCategory(item)}
+          onClick={() => {selectCategory(item); selectKey('category'); fetchStores(item.name)}}
           style={
-            category.name === item.name ? 
+            category?.name === item.name ? 
               {
                 borderBottom: "2px solid #97dbae"
               } 
@@ -43,7 +45,7 @@ export function MenuCategories() {
           >
           <div className='category_img' 
             style={
-              category.name === item.name ? 
+              category?.name === item.name ? 
                 {
                   backgroundColor: '#97dbae', 
                 } 

@@ -2,7 +2,7 @@ import '../styles/categoryHeader.css'
 
 type Props = {
   item: {
-    logo: any,
+    logo?: any,
     name: string
   }
 }
@@ -14,7 +14,7 @@ export function CategoryHeader(props: Props) {
         <img src={props.item.logo} alt="Logo da categoria"/>
       </div>
       <div className="category-header-text">
-        <p>Tecnologia</p>
+        <p>{props.item.name}</p>
       </div>
     </div>
   )

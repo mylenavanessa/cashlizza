@@ -10,37 +10,40 @@ import { About } from './pages/About';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { CategoriesProvider } from './store/categories';
+import { GeneralProvider } from './store/general';
 
 
 function App() {
   return (
     <CategoriesProvider>
-    <Router>
-      <Navbar />
-      <Switch>
-        <Container>
-          <Route exact path='/' >
-            < Home />
-          </Route>
-          <Route path='/help'>
-            < Help />
-          </Route>
-          <Route path='/contact'>
-            < Contact />
-          </Route>
-          <Route path='/about'>
-            < About />
-          </Route>
-          <Route path='/privacy'>
-            < Privacy />
-          </Route>
-          <Route path='/terms'>
-            < Terms />
-          </Route>
-        </Container>
-      </Switch>
-      <Footer />
-    </ Router>
+      <GeneralProvider>
+        <Router>
+          <Navbar />
+          <Switch>
+            <Container>
+              <Route exact path='/' >
+                < Home />
+              </Route>
+              <Route path='/help'>
+                < Help />
+              </Route>
+              <Route path='/contact'>
+                < Contact />
+              </Route>
+              <Route path='/about'>
+                < About />
+              </Route>
+              <Route path='/privacy'>
+                < Privacy />
+              </Route>
+              <Route path='/terms'>
+                < Terms />
+              </Route>
+            </Container>
+          </Switch>
+          <Footer />
+        </ Router>
+      </GeneralProvider>
     </CategoriesProvider>
     );
 }

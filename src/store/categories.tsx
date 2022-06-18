@@ -3,15 +3,23 @@ import api from '../services/api';
 
 interface CategoriesContextDate {
   category: {
-    name?: any,
-    iconName?: any
-  },
-  categories: object[],
-  selectCategory: (category: Category) => void
+    id?: number,
+    name: string,
+    logo?: any,
+    max_cashback?: string
+  } | null,
+  categories: {
+    id?: number,
+    name: string,
+    logo?: any,
+    max_cashback?: string
+  }[],
+  selectCategory: (category: any) => void,
+  setCategories: (categories: []) => void
 }
 
 type Category = {
-  name?: any,
+  name: any,
   iconName?: any
 }
 
@@ -23,7 +31,7 @@ export const CategoriesContext = createContext({} as CategoriesContextDate);
 
 export function CategoriesProvider({ children }: CategoriesProviderProps) {
   const [categories, setCategories] = useState([]);
-  const [category, setCategory] = useState({});
+  const [category, setCategory] = useState(null);
 
 
   useEffect(() => {
@@ -35,13 +43,13 @@ export function CategoriesProvider({ children }: CategoriesProviderProps) {
     setCategories(data)
   }
 
-  function selectCategory(category: Category) {
+  function selectCategory(category: any) {
     setCategory(category)
   }
 
   return (
     <CategoriesContext.Provider 
-      value={{categories, category, selectCategory}}
+      value={{categories, category, selectCategory, setCategories}}
     >
       {children}
     </CategoriesContext.Provider>

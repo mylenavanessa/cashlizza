@@ -20,7 +20,7 @@
 
 .show-more-button {
   border: 1px solid #97dbae;
-  color: #97dbae;
+  color: #919191;
   padding: 10px 25px;
   text-align: center;
   text-decoration: none;
@@ -33,9 +33,10 @@
   font-weight: bold;
   border-radius: 5px;
   margin-top: 30px;
+  cursor: not-allowed;
 }
 
-.show-more-button:hover {
+/* .show-more-button:hover {
   color: #fff;
   background-color: #97dbae;
-}
+} */

@@ -4,7 +4,7 @@ type Props = {
   item: {
     key: string;
     category_name: string;
-    percent_cashback: number;
+    max_cashback: number;
     logo: string;
   }
 }
@@ -17,7 +17,7 @@ export function StoreCategoryHeader(props: Props) {
       </div>
       <div className="store-category-header-text">
         Cashback de até 
-        <span className='store-category-header-text-special'> {props.item.percent_cashback}% </span>em 
+        <span className='store-category-header-text-special'> {props.item.max_cashback}% </span>em 
         <span className='store-category-header-text-special'> {props.item.category_name}</span>
       </div>
     </div>

@@ -2,30 +2,34 @@ import '../styles/listItem.css'
 
 type Props = {
   item: {
-    logo_company: string,
-    logo_store?: string,
-    product_name?: string,
-    product_price?:number,
-    percent: number,
-    description?: string
+    category_name: string,
+    store_logo?: string,
+    company_logo?: string,
+    name?: string,
+    price?:number,
+    percentage: number,
+    description?: string,
+    url?: string
   },
 }
 
 export function ListItem(props: Props) {
   return(
     <div className='list-item-content'>
-      <img src={props.item.logo_company} alt='logo empresa'/>
-      <p><span>{props.item.percent}</span> %</p>
-      {props.item.logo_store && (
-        <img src={props.item.logo_store} alt='logo loja'/>
+      <img src={props.item.company_logo} alt='logo empresa'/>
+      <p><span>{props.item.percentage}</span> %</p>
+      {props.item.store_logo && (
+        <img src={props.item.store_logo} alt='logo loja'/>
       )}
-      {props.item.product_name && (
+      {props.item.name && (
         <div>
-          <p>{props.item.product_name}</p>
-          <p className='list-item-price'>R$ {props.item.product_price?.toLocaleString('pt-BR')}</p>
+          <p>{props.item.name}</p>
+          <p className='list-item-price'>R$ {props.item.price?.toLocaleString('pt-BR')}</p>
         </div>
       )}
-      <button className='list-item-button' type="button">Ativar Cashback</button>
+      <a href={props.item.url} target="_blank" rel="noreferrer">
+        <button className='list-item-button' type="button">Ativar Cashback</button>
+      </a>
     </div>
   )
 }
