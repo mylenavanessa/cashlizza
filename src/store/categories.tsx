@@ -18,11 +18,6 @@ interface CategoriesContextDate {
   setCategories: (categories: []) => void
 }
 
-type Category = {
-  name: any,
-  iconName?: any
-}
-
 interface CategoriesProviderProps{
   children: ReactNode;
 }

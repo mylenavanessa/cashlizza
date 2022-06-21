@@ -18,7 +18,6 @@ import '../styles/home.css'
 import { ListItem } from "../components/ListItem";
 import { useContext } from "react";
 import { GeneralContext } from "../store/general";
-import { isTemplateExpression } from "typescript";
 import { CategoriesContext } from "../store/categories";
 
 const CATEGORIES = [
@@ -30,12 +29,6 @@ const CATEGORIES = [
   {name: 'Moda', iconName: iconModa},
   {name: 'Saúde', iconName: iconMaleta},
   {name: 'Tecnologia', iconName: iconPlaca},
-]
-
-const MOCK_DATA_CATEGORY = [
-  {id: 1, name: 'Tecnologia', logo: iconPlaca, max_cashback: '9', show_type:'category'},
-  {id: 2, name: 'Beleza', logo: iconPlaca, max_cashback: '10', show_type:'category'},
-  {id: 3, name: 'Moda', logo: iconPlaca, max_cashback: '13', show_type:'category'},
 ]
 
 function renderHeader(key: string, item: any) {
